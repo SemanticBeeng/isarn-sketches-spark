@@ -10,7 +10,10 @@ target/
 lib_managed/
 src_managed/
 project/boot/
+project/.boot/
 project/plugins/project/
+.bsp/
+.idea/
 
 # Scala-IDE specific
 .scala_dependencies

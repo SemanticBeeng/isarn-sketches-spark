@@ -14,15 +14,15 @@ organization := "org.isarnproject"
 
 val packageVersion = "0.5.3-SNAPSHOT"
 
-val sparkVersion = "3.0.1"
+val sparkVersion = "3.1.2"
 
 val sparkSuffix = s"""sp${sparkVersion.split('.').take(2).mkString(".")}"""
 
 version := s"${packageVersion}-${sparkSuffix}"
 
-scalaVersion := "2.12.11"
+scalaVersion := "2.12.13"
 
-crossScalaVersions := Seq("2.12.11")
+crossScalaVersions := Seq("2.12.13")
 
 pomIncludeRepository := { _ => false }
 
