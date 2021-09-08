@@ -11,6 +11,8 @@ lib_managed/
 src_managed/
 project/boot/
 project/.boot/
+project/.sbtboot/
+project/.ivy/
 project/plugins/project/
 .bsp/
 .idea/
