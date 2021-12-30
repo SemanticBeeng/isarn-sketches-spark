@@ -58,12 +58,28 @@ developers := List(
 
 resolvers += Resolver.mavenLocal
 
+
+// NOTE: @statisticallyfit additions to libraries here: 
+
 libraryDependencies ++= Seq(
   "org.isarnproject" % "isarn-sketches-java" % "0.3.0",
   "org.apache.spark" %% "spark-core" % sparkVersion % Provided,
   "org.apache.spark" %% "spark-sql" % sparkVersion % Provided,
   "org.apache.spark" %% "spark-mllib" % sparkVersion % Provided,
-  "com.lihaoyi" %% "utest" % "0.7.4" % Test)
+  "com.lihaoyi" %% "utest" % "0.7.4" % Test,
+
+  // NOTE: added by @statisticallyfit (for adjusting tests by adding distributions):
+
+  // Math + Statistics libraries
+  // -- Apache commons math3
+  "org.apache.commons" % "commons-math3" % "3.6.1",
+  // -- Breeze:
+  "org.scalanlp" %% "breeze" % "2.0",
+  // -- Probability Monad
+  "org.jliszka" %% "probability-monad" % "1.0.4"
+)
+
+
 
 // tell sbt about utest
 testFrameworks += new TestFramework("utest.runner.Framework")
